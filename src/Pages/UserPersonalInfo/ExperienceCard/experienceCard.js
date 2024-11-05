@@ -173,7 +173,10 @@ const ExperienceCard = () => {
                         fontSize: "1.5rem",
                         color: "#444444",
                       }}
-                    >Add Experience</p>
+                    >
+                    {/* Add Experience */}
+
+                    </p>
                     <button type="button" className="btn" data-dismiss="modal" aria-label="Close">
                       <AiOutlineCloseCircle />
                     </button>
