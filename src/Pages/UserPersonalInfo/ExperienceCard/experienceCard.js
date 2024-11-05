@@ -174,7 +174,7 @@ const ExperienceCard = () => {
                         color: "#444444",
                       }}
                     >
-                    {/* Add Experience */}
+                    Add Experience
 
                     </p>
                     <button type="button" className="btn" data-dismiss="modal" aria-label="Close">
