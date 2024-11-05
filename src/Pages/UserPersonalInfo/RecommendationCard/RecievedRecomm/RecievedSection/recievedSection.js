@@ -15,18 +15,18 @@ import { Interceptor } from "../../../../../ErrorStatus/errorStatus";
 const RecievedSection = (props) => {
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    
 
   }
   const { getData } = useContext(userContext)
@@ -104,9 +104,9 @@ const RecievedSection = (props) => {
             <div className="mx-2 mt-2" style={{ fontSize: "12px" }}> Skills :
               {props.skills.length > 0 ?
 
-                props.skills.map((x, i) => {
+                props.skills.map((x) => {
 
-                  return (<span key={i} style={{ fontSize: "12px" }}> {x.skillId.skill} &#44; </span>)
+                  return (<span key={x.skillId.id} style={{ fontSize: "12px" }}> {x.skillId.skill} &#44; </span>)
                 }) : " "}
             </div>
 

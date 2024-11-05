@@ -37,18 +37,18 @@ const RecommendationCard = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     var candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     var candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var candidateEmailId = candidateDataMix.candidate.email;
 
   }
 
@@ -223,14 +223,14 @@ const RecommendationCard = () => {
 
   }
 
-  const handleButtonClick = (button) => {
-    setSelectedButton(button);
-  };
-  const getButtonStyle = (button) => {
-    return button === selectedButton
-      ? { backgroundColor: 'var(--list-item-color)', color: 'white', border: '0px' }
-      : {};
-  };
+  // const handleButtonClick = (button) => {
+  //   setSelectedButton(button);
+  // };
+  // const getButtonStyle = (button) => {
+  //   return button === selectedButton
+  //     ? { backgroundColor: 'var(--list-item-color)', color: 'white', border: '0px' }
+  //     : {};
+  // };
 
 
   return (

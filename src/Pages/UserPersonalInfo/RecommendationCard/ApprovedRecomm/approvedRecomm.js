@@ -22,14 +22,19 @@ const ApprovedRecomm = (props) => {
                      <u>{subString(props.recommenderLinkedInUrl, 27)} </u>
                      </span> </a> </span>
                     
-                    <div className="mx-2 mt-2" style={{ fontSize: "12px" }}> Skills :
-                        {props.skills.length > 0 ?
+                     <div className="mx-2 mt-2" style={{ fontSize: "12px" }}>
+    Skills:
+    {props.skills.length > 0 ? (
+        props.skills.map((x) => (
+            <span key={x.skillId.id} style={{ fontSize: "12px" }}>
+                {x.skillId.skill} &#44;
+            </span>
+        ))
+    ) : (
+        " "
+    )}
+</div>
 
-                            props.skills.map((x, i) => {
-
-                                return (<span key={i} style={{ fontSize: "12px" }}> {x.skillId.skill} &#44; </span>)
-                            }) : " "}
-                    </div>
 
 
             

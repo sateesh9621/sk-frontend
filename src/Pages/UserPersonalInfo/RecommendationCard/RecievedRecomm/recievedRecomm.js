@@ -6,18 +6,18 @@ const Requested = (props ) => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
-    var token = candidateDataMix.token;
-    var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
+    // var token = candidateDataMix.token;
+    // var userId = candidateDataMix.candidate._id;
+    // var candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
-    var token = candidateDataMix.token;
-    var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
+    // var token = candidateDataMix.token;
+    // var userId = candidateDataMix.candidate._id;
+    // var candidateEmailId = candidateDataMix.candidate.email;
 
   }
 
