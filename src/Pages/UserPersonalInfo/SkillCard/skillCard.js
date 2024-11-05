@@ -28,7 +28,7 @@ export const SkillCard = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -36,7 +36,7 @@ export const SkillCard = () => {
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -44,7 +44,7 @@ export const SkillCard = () => {
   }
 
   const {
-    formState: { errors },
+    formState: {  },
   } = useForm();
 
   const [skillData, setSkillData] = useState([{}])
@@ -90,7 +90,6 @@ export const SkillCard = () => {
 
   const handleChangeExpEdit = (event, idx) => {
 
-    const label = 'experience'
     const newValue = event.target.value
 
     const updatedArray = skillData.map((item, i) => {

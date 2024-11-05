@@ -9,7 +9,7 @@ import {
 import './referalCand.css'
 import { MdDelete, MdLibraryAdd } from "react-icons/md";
 import { trackPromise } from "react-promise-tracker";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Rating } from 'react-simple-star-rating';
 import { userContext } from "../../../Context/userContextState";
 import ApiConstants from '../../../Services/apiconstants';
@@ -28,18 +28,18 @@ const ReferCand = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var candidateEmailId = candidateDataMix.candidate.email;
 
   }
 
