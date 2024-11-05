@@ -23,7 +23,7 @@ const ExperienceCard = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -31,7 +31,7 @@ const ExperienceCard = () => {
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -41,11 +41,8 @@ const ExperienceCard = () => {
   const { promiseInProgress } = usePromiseTracker();
 
   const {
-    register,
     handleSubmit,
-    formState: { errors },
-    setValue,
-    reset
+    formState: {}
   } = useForm();
 
   // Experience Axios Section Start
@@ -292,7 +289,7 @@ const ExperienceCard = () => {
 
             experienceData.map((x, index) => {
               return (
-                <div key={index}>
+                <div key={x._id}>
 
                   {index > 0 && (
                     <div className="d-flex " style={{ height: '70px' }}>
@@ -300,7 +297,7 @@ const ExperienceCard = () => {
                     </div>
                   )}
 
-                  <UpdDelExp key={x._id} expId={x._id} company={x.company} description={x.description}
+                  <UpdDelExp  expId={x._id} company={x.company} description={x.description}
                     designation={x.designation} startDate={x.startDate} endDate={x.endDate} {...x} />
                 </div>
               )

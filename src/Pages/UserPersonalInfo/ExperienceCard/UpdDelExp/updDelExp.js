@@ -17,18 +17,18 @@ const UpdDelExp = (props) => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
+    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
+    // var candidateEmailId = candidateDataMix.candidate.email;
 
   }
 
@@ -36,10 +36,8 @@ const UpdDelExp = (props) => {
   const { promiseInProgress } = usePromiseTracker();
 
   const {
-    register,
     handleSubmit,
-    formState: { errors },
-    setValue,
+    formState: { }
   } = useForm();
 
   // Experience Axios Section Start
@@ -162,10 +160,6 @@ const UpdDelExp = (props) => {
     }
   }, [])
 
-
-  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-  ];
 
 
 
