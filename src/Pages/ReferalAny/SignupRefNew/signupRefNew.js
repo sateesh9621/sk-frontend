@@ -19,11 +19,10 @@ export default function SignupRefNew() {
         register,
         handleSubmit,
         formState: { errors },
-        setValue,
         reset
     } = useForm();
-    const [isSubmitting, setIsSubmitting] = useState(true);
-    const [isEmailVerified, setisEmailVerified] = useState(false);
+    const [ setIsSubmitting] = useState(true);
+   
     const [disable, setDisable] = useState(true);
     const [errorMessage, SetErrorMessage] = useState("")
 

@@ -35,16 +35,11 @@ const AboutCard = () => {
 
   const { promiseInProgress } = usePromiseTracker();
 
-  const [formValue, setformValue] = useState({
-    experienceSummary: ""
-  });
 
 
   const {
-    register,
     handleSubmit,
-    formState: { errors },
-    setValue
+    formState: { }
   } = useForm();
 
 

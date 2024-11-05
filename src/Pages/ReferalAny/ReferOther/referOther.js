@@ -27,7 +27,6 @@ const ReferOther = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -35,7 +34,6 @@ const ReferOther = () => {
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
     var candidateEmailId = candidateDataMix.candidate.email;
@@ -51,9 +49,8 @@ const ReferOther = () => {
   const dispatch = useDispatch();
 
   const {
-    register,
     handleSubmit,
-    formState: { errors },
+    formState: {  },
     reset,
   } = useForm();
 
@@ -370,9 +367,10 @@ const ReferOther = () => {
 
                       <div className="row mt-3 mx-4  ">
 
-                        <label className="ml-0" style={{ marginLeft: "-0.5rem" }} > Candidate’s LinkedIn URL</label>
+                        <label htmlFor="candidateLinkedInUrl"  className="ml-0" style={{ marginLeft: "-0.5rem" }} > Candidate’s LinkedIn URL</label>
                         <input
                           type="url"
+                          id="candidateLinkedInUrl"
                           className="form-control"
                           name="candidateLinkedInUrl"
                           value={formValue.candidateLinkedInUrl}
@@ -383,8 +381,8 @@ const ReferOther = () => {
 
                       <div className="row mt-3 mx-4">
 
-                        <label style={{ marginLeft: "-0.5rem" }}  >How do you know the candidate ?</label>
-                        <select className="form-control" value={formValue.connectionType}
+                        <label htmlFor="connectionType" style={{ marginLeft: "-0.5rem" }}  >How do you know the candidate ?</label>
+                        <select id="connectionType" className="form-control" value={formValue.connectionType}
                           onChange={handleChange} name="connectionType"  >
                           <option value="I know as a Colleague" >I know as a Colleague</option>
                           <option value="I know as a Client" >I know as a Client</option>

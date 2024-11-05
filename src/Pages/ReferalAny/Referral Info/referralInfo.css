@@ -22,8 +22,7 @@
     margin-top: 11px;
     margin-bottom: 34px;
   }
-  .info-list-referral-candidate ul li {
-  }
+ 
   .faq-referral-program {
     text-align: center;
   }
@@ -40,10 +39,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .main-referral-section {
-    /* margin-left: 20px;
-    margin-left: 20px; */
-  }
+  
   .refer-candidate-section {
     margin-top: 30px;
     margin-bottom: 22px;
@@ -66,8 +62,7 @@
     margin-top: 11px;
     margin-bottom: 34px;
   }
-  .info-list-referral-candidate ul li {
-  }
+ 
   .faq-referral-program {
     text-align: center;
   }
@@ -84,10 +79,7 @@
 }
 
 @media (min-width: 992px) {
-  .main-referral-section {
-    /* margin-left: 65px;
-    margin-right: 65px; */
-  }
+ 
   .refer-candidate-section {
     margin-top: 30px;
     margin-bottom: 22px;
@@ -110,8 +102,7 @@
     margin-top: 22px;
     margin-bottom: 68px;
   }
-  .info-list-referral-candidate ul li {
-  }
+ 
   .faq-referral-program {
     text-align: center;
   }

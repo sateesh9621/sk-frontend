@@ -18,28 +18,22 @@ const EducationCard = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    var candidateEmailId = candidateDataMix.candidate.email;
 
   }
 
   const { promiseInProgress } = usePromiseTracker();
 
   const {
-    register,
     handleSubmit,
-    formState: { errors },
-    setValue
+    formState: {  },
   } = useForm();
 
   // Education axios section  Start
@@ -224,9 +218,10 @@ const EducationCard = () => {
                       {promiseInProgress === true ? <Loading /> : null}
 
                       <div className="col-md-12 col-sm-12 mt-3  ">
-                        <label >School / University* </label>
+                        <label  htmlFor="schoolInput" >School / University* </label>
                         <input
                           type="text"
+                          id="schoolInput"
                           className="form-control"
                           placeholder="Ex. Boston University"
                           name="school"

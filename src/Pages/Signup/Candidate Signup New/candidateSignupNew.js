@@ -18,7 +18,7 @@ export default function CandidateSignup() {
         formState: { errors },
         reset,
     } = useForm();
-    const [isSubmitting, setIsSubmitting] = useState(true);
+    const [setIsSubmitting] = useState(true);
     const [disable, setDisable] = useState(true);
     const [errorMessage, SetErrorMessage] = useState("")
 

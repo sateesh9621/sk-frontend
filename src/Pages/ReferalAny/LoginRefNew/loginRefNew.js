@@ -15,14 +15,14 @@ import ForgetPasswordModal from '../../../Component/Forget Password Modal/forget
 import { useDispatch } from 'react-redux';
 import { selectSidebarMenuSelection } from '../../../Redux/Reducer/sidebarMenuSelectionSlice';
 export default function LoginRefNew() {
-    let { userData, setUserData, getData } = useContext(userContext)
+    let { getData } = useContext(userContext)
 
     const { promiseInProgress } = usePromiseTracker();
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isEmailVerified, setisEmailVerified] = useState(true);
+    const [ setIsSubmitting] = useState(false);
+   
     const [disable, setDisable] = useState(true);
     const [errorMessage, SetErrorMessage] = useState("")
 
@@ -130,10 +130,26 @@ export default function LoginRefNew() {
                 </div>
 
                 <div className="d-flex flex-row-reverse">
-                    <p>
-                        <span onClick={forgetPasswordModal} style={{ color: "var(--list-item-color)", cursor: 'pointer' }}> Forgot password? </span>
-                    </p>
-                </div>
+  <p>
+    <button 
+      onClick={forgetPasswordModal} 
+      style={{ 
+        color: "var(--list-item-color)", 
+        cursor: 'pointer', 
+        background: 'none', 
+        border: 'none', 
+        padding: 0, 
+        font: 'inherit',
+        textDecoration: 'underline'
+      }} 
+      role="link" 
+      aria-label="Forgot password?"
+    >
+      Forgot password?
+    </button>
+  </p>
+</div>
+
 
                 <div className="mt-2 mb-1 d-flex justify-content-center">
                     <ReCAPTCHA

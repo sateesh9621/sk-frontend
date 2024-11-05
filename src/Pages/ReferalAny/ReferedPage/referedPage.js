@@ -7,8 +7,6 @@ import ReferOther from '../ReferOther/referOther.js';
 import './referedPage.css';
 
 
-
-
 const ReferedPage = () => {
 
   const titleSelection = useSelector(
@@ -28,7 +26,8 @@ const ReferedPage = () => {
           <div className="row d-flex justify-content-center  ">
             <div className='referral-reward-section'>
               <div className='referral-reward'>
-                <span><b>Referral Reward</b> </span><span> - </span><span onClick={referralProgram} style={{ textDecoration: 'underline', cursor: 'pointer', fontWeight: '500' }}>Click here to know more</span>
+                <span><b>Referral Reward</b> </span><span> - </span><span onClick={referralProgram} role="button" 
+  tabIndex="0" style={{ textDecoration: 'underline', cursor: 'pointer', fontWeight: '500' }}>Click here to know more</span>
               </div>
             </div>
             <div className="col-md-3 p-md-4 p-sm-5 ">
@@ -37,16 +36,7 @@ const ReferedPage = () => {
 
             <div className="col-md-8 p-md-4 ">
 
-              {(() => {
-                switch (titleSelection.menuSelection) {
-
-                  case "Personal":
-                    return <ReferOther />;
-                    break;
-                  default:
-                    return <ReferOther />;
-                }
-              })()}
+            <ReferOther />
             </div>
           </div>
           <div className="row ">

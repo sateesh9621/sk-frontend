@@ -18,7 +18,8 @@ export default function userReferal() {
                     <div className='referral-reward-section'>
                         <div className='container'>
                             <div className='referral-reward'>
-                                <span><b>Referral Reward</b> </span><span> - </span><span onClick={referralProgram} style={{ textDecoration: 'underline', cursor: 'pointer', fontWeight: '500' }}>Click here to know more</span>
+                                <span><b>Referral Reward</b> </span><span> - </span><span onClick={referralProgram} role="button" 
+  tabIndex="0"  style={{ textDecoration: 'underline', cursor: 'pointer', fontWeight: '500' }}>Click here to know more</span>
                             </div>
                         </div>
                     </div>

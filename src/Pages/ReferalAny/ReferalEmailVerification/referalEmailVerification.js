@@ -20,7 +20,7 @@ const ReferalEmailVerification = () => {
     reset,
   } = useForm();
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [ setIsSubmitting] = useState(false);
 
   const [disable, setDisable] = useState(true);
   const [errorMessage, SetErrorMessage] = useState("")
