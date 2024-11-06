@@ -13,10 +13,7 @@ export default function CardJobsStatus({ jobStatusFilter }) {
     const candidateDataMix = JSON.parse(
       sessionStorage.getItem("candidate_data")
     );
-    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
-    // var userId = candidateDataMix.candidate._id;
-    // var candidateEmailId = candidateDataMix.candidate.email;
   }
   const [cardBorder, setCardBorder] = useState({
     border: "",

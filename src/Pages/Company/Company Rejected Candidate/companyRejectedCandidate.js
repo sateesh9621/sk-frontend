@@ -17,7 +17,6 @@ export default function CompanyRejectedCandidate() {
     );
 
     const [hasLoaded, setHasLoaded] = useState();
-    const [searchTest, setSearchTest] = useState('');
 
     const userData = () => {
         const company_loggedin_user_data = JSON.parse(sessionStorage.getItem("company_loggedin_user_data"))
@@ -55,7 +54,7 @@ export default function CompanyRejectedCandidate() {
     }, [rejectionCandidate]);
 
     return (hasLoaded ?
-        <>
+        
             <div className='row'>
                 {values.rejectedCandidateData.length == 0 && <div className='no-data' style={{ textAlign: 'center' }}>No Rejected candidate yet</div>}
                 {
@@ -72,7 +71,7 @@ export default function CompanyRejectedCandidate() {
                 }
 
             </div>
-        </>
+        
         : <p>Loading... <Loading /></p>);
 
 }

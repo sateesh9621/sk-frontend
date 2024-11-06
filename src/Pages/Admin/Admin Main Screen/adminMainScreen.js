@@ -86,6 +86,7 @@ export default function AdminMainScreen() {
                 data-bs-target="#offcanvasWithBothOptions"
                 aria-controls="offcanvasWithBothOptions"
                 style={{ cursor: "pointer" }}
+                alt="Hamburger"
               />
             </div>
             <div className="col-10 col-lg-11">

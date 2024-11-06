@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './companySideFilter.css'
-import { Rating } from 'react-simple-star-rating'
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { changeSkillSideFilterDataCompany } from '../../../Redux/Reducer/skillSideFilterDataCompanySlice';

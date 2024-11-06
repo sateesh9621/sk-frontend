@@ -239,7 +239,7 @@ export default function StudentCard(props) {
                         </div>
                         <div className='for-border'>
                             <div className='student-profile'>
-                                <img className="student-profile-pic" src={items.imageLink ? items.imageLink : ProfilePic} />
+                                <img className="student-profile-pic" src={items.imageLink ? items.imageLink : ProfilePic} alt='student-profile' />
                             </div>
 
                             <div className='skills'>

@@ -42,7 +42,7 @@ return (
                   height: "100%",
                   position: "acsolute",
                 }}
-                alt=""
+                alt="uesrImage"
               />
              
             </div>

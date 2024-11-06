@@ -54,7 +54,7 @@ export default function CompanyShortlistedCandidate() {
         userData();
     }, [rejectionCandidate]);
     return (hasLoaded ?
-        <>
+    
             <div className='row'>
                 {values.shortlistedCandidateData.length == 0 && <div className='no-data' style={{ textAlign: 'center' }}>No shortlisted candidate yet</div>}
                 {
@@ -71,7 +71,7 @@ export default function CompanyShortlistedCandidate() {
                 }
 
             </div>
-        </>
+        
         : <p>Loading... <Loading /></p>);
 
 }

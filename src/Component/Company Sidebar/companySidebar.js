@@ -32,7 +32,7 @@ export default function CompanySidebar() {
     (state) => state.sidebarMenuSelectionReducer
   );
   const menuSelection = (data) => {
-    //Mixpanel(data, mixpanelData)
+    // Mixpanel(data, mixpanelData)
     dispatch(selectSidebarMenuSelection(data));
     dispatch(selectCardItemSelection(""));
   };

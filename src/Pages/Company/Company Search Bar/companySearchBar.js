@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './companySearchBar.css'
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -22,7 +22,6 @@ export default function CompanySearchBar() {
 
 
     return (
-        <>
             <div className="form-group has-search">
                 <span className="fa fa-search form-control-feedback"></span>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -36,9 +35,9 @@ export default function CompanySearchBar() {
                         <datalist id="jobRoledata">
                             {jobRoleSelection.jobRoleList.data.map((d, i) => {
                                 return (
-                                    <>
+                                
                                         <option key={i} value={d.role} />
-                                    </>
+                                    
                                 );
 
                             })}
@@ -53,6 +52,5 @@ export default function CompanySearchBar() {
 
 
             </div>
-        </>
     );
 }

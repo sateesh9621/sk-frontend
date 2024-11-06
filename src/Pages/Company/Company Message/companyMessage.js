@@ -1,17 +1,13 @@
-import react from 'react';
+import React, { useEffect, useState } from 'react';
 import './companyMessage.css'
-import { ChatItem, ChatList, Input, MessageBox } from "react-chat-elements"
+import { ChatItem, MessageBox } from "react-chat-elements"
 import axios from 'axios';
 import ApiConstants from '../../../Services/apiconstants';
-import { useEffect } from 'react';
-import Swal from 'sweetalert2';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { trackPromise, usePromiseTracker } from 'react-promise-tracker';
 import Loading from '../../../Component/Loading/loading';
 import ChatImage from '../../../Assets/chatImage.png';
 import { Interceptor } from '../../../ErrorStatus/errorStatus';
-import { Accordion, Card, useAccordionButton } from 'react-bootstrap';
 import CompanyLayout from '../Layout';
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
@@ -189,7 +185,6 @@ export default function CompanyMessage() {
      
 
     return (
-      <>
         <CompanyLayout>
           <div className="container">
             <div className="row">
@@ -330,7 +325,7 @@ export default function CompanyMessage() {
               {!activeChat && (
                 <div className="col-md-12 col-lg-7">
                   <div className="chat-image">
-                    <img src={ChatImage} className="img-fluid" />
+                    <img src={ChatImage} className="img-fluid" alt='ChatImage' />
                   </div>
                   <div className="new-message">
                     <span>Welcome to Skilltera Chat</span>
@@ -349,6 +344,5 @@ export default function CompanyMessage() {
             </div>
           </div>
         </CompanyLayout>
-      </>
     );
 }

@@ -15,10 +15,7 @@ export default function JobDescription(props) {
 
     if (sessionStorage.getItem('candidate_data') != null) {
         const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-        var mixpanelData = candidateDataMix.candidate.email;
         var token = candidateDataMix.token;
-        var userId = candidateDataMix.candidate._id;
-        var candidateEmailId = candidateDataMix.candidate.email;
     }
     const [applyClicked, setapplyClicked] = useState(false);
     const [jobId, setJobId] = useState('')

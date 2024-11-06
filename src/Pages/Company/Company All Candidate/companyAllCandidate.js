@@ -25,7 +25,6 @@ export default function CompanyAllCandidate() {
     )
 
     const [hasLoaded, setHasLoaded] = useState();
-    const [searchTest, setSearchTest] = useState('');
 
     const userData = () => {
         const company_loggedin_user_data = JSON.parse(sessionStorage.getItem("company_loggedin_user_data"))

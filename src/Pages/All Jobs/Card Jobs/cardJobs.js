@@ -1,11 +1,10 @@
-import react, { useState } from 'react'
+import React, { useState } from 'react'
 import uesrImageDefault from "../../../Assets/profilePic.png";
 import JobDescription from '../Job Description/jobDescription';
 import { useQuery } from 'react-query'
 import Loading from '../../../Component/Loading/loading'
 import ApiConstants from '../../../Services/apiconstants'
 import axios from 'axios'
-import { async } from 'q'
 import './cardJobs.css'
 import Swal from 'sweetalert2';
 import { useDispatch, useSelector } from 'react-redux';
@@ -25,10 +24,7 @@ export default function CardJobs() {
 
     if (sessionStorage.getItem('candidate_data') != null) {
         const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-        var mixpanelData = candidateDataMix.candidate.email;
         var token = candidateDataMix.token;
-        var userId = candidateDataMix.candidate._id;
-        var candidateEmailId = candidateDataMix.candidate.email;
     }
 
     const { isLoading, error, data, isFetching, refetch } = useQuery(['allJobs', getFilterDataJobs], async () => {
@@ -132,7 +128,7 @@ export default function CardJobs() {
                                                             }}
                                                                 onClick={() => jobDataPerCard(d)}>
                                                                 <div className='company-logo'>
-                                                                    <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '60px', height: '60px' }} />
+                                                                    <img src={uesrImageDefault} className="img-fluid rounded-circle" style={{ width: '60px', height: '60px' }} alt='uesrImageDefault'/>
                                                                 </div>
                                                                 <div className='company-info'>
                                                                     <div className='company-heading'>

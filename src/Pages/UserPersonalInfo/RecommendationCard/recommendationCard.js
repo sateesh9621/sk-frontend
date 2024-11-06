@@ -37,19 +37,14 @@ const RecommendationCard = () => {
 
   if (sessionStorage.getItem('candidate_data') != null) {
     var candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data"))
-    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    // var candidateEmailId = candidateDataMix.candidate.email;
   }
 
   if (sessionStorage.getItem('candidate_data_ref') != null) {
     var candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
-    // var mixpanelData = candidateDataMix.candidate.email;
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-    // var candidateEmailId = candidateDataMix.candidate.email;
-
   }
 
   const [recommendations, setRecommendation] = useState([])
@@ -62,7 +57,6 @@ const RecommendationCard = () => {
   const [receivedRecommendation, setReceivedRecommendation] = useState([])
   const [approvedRecommendation , setApprovedRecommendation] = useState([])
   const [requestedRecommendation, setRequestedRecommendation] = useState([])
-  const [selectedButton, setSelectedButton] = useState('received');
   const [candidateLinkedInUrl, setCandidateLinkedInUrl] = useState();
 
 

@@ -16,7 +16,6 @@ export default function CompanySavedCandidate() {
     );
 
     const [hasLoaded, setHasLoaded] = useState();
-    const [searchTest, setSearchTest] = useState('');
 
     const userData = () => {
         const company_loggedin_user_data = JSON.parse(sessionStorage.getItem("company_loggedin_user_data"))
@@ -53,7 +52,7 @@ export default function CompanySavedCandidate() {
     }, [rejectionCandidate]);
 
     return (hasLoaded ?
-        <>
+        
             <div className='row'>
                 {values.savedCandidateData.length == 0 && <div className='no-data' style={{ textAlign: 'center' }}>No saved candidate yet</div>}
                 {
@@ -70,7 +69,7 @@ export default function CompanySavedCandidate() {
                 }
 
             </div>
-        </>
+        
         : <p>Loading... <Loading /></p>);
 
 }

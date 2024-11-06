@@ -412,6 +412,7 @@ export default function NavBarNew() {
                       <img
                         src={uesrImageDefault}
                         className="img-fluid rounded-circle"
+                        alt="uesrImageDefault"
                         style={{ width: "32px", height: "32px" }}
                       />
                     </span>

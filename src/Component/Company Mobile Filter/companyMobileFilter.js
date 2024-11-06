@@ -47,11 +47,11 @@ export default function CompanyMobileFilter() {
                   <option selected>Search Skill</option>
                   {test.map((s) => {
                     return (
-                      <>
+                      
                         <option value={s.skill} name={s.skill}>
                           {s.skill}
                         </option>
-                      </>
+                      
                     );
                   })}
                 </select>

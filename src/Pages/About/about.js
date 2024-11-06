@@ -17,13 +17,13 @@ export default function About() {
       </Helmet>
       <NavBarNew />
       <div className="aboutus-banner">
-        <img className="img-fluid-banner" src={AboutUs_Banner} />
+        <img className="img-fluid-banner" src={AboutUs_Banner} alt='img-fluid'/>
         <h1 className="hero-text">About Us</h1>
       </div>
       <div className="section-one container-fluid">
         <div className="row">
           <div className="col-12 col-md-6 col-lg-6">
-            <img src={About_Pic_One} className="img-fluid" />
+            <img src={About_Pic_One} className="img-fluid" alt='About_Pic_One'/>
           </div>
           <div className="col-12 col-md-6 col-lg-6">
             <h3 className="heading-one">For Experienced Talent and Companies to Win Together</h3>
@@ -51,7 +51,7 @@ export default function About() {
             <p className="para-two">Skilltera seeks to address all of your priorities. Our goal is to significantly improve the candidate conversion ratio at the recruiter’s end. We attempt to bring down the hiring cycle time drastically by leveraging the power of professional networks to vet every candidate before we send them to you.</p>
           </div>
           <div className="col-12 col-md-6 col-lg-6">
-            <img src={About_Pic_two} className="img-fluid d-flex justify-content-center" />
+            <img src={About_Pic_two} className="img-fluid d-flex justify-content-center" alt='About_Pic_two'/>
           </div>
         </div>
       </div>

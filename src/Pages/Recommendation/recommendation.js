@@ -174,7 +174,8 @@ const Recommendation = () => {
 
               <img
                 src={recommendedCandidate?.requesterImage ? recommendedCandidate?.requesterImage : uesrImageDefault}
-                className="rounded-circle " alt="..." height="100" width="100" />
+                className="rounded-circle " alt="..." height="100" width="100"  />
+                
             </div>
           </div>
 

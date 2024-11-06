@@ -653,7 +653,7 @@ const Sidebar = () => {
                   height: "100%",
                   position: "acsolute",
                 }}
-                alt=""
+                alt="profilePic"
               />
               <div className="profilePicEditBtn rounded-circle border-dark">
                 {" "}
