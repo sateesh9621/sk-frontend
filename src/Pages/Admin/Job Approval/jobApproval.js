@@ -32,7 +32,7 @@ const JobApproval = () => {
   const [newSkill , setNewSkill] = useState('')
 
   const [skillQuery] = useState('');
-  const [addSkill, SetAddSkill] = useState([]);
+  const [addSkill, setAddSkill] = useState([]);
   
   const handleChangeExp = (event, idx) => {
     const newValue = event.target.value
@@ -43,13 +43,13 @@ const JobApproval = () => {
     const newElement = data.searchSkill;
     let obj = skillList.find(o => o.skill === newElement);
     // {_id: '62d1d45e87ae97aeba81b090', skill: 'Business Law', active: true}
-    SetAddSkill(addSkill => [...addSkill, { skillId: obj._id, skillName: newElement, rating: 0 }])
+    setAddSkill(addSkill => [...addSkill, { skillId: obj._id, skillName: newElement, rating: 0 }])
   }
 
   const handleRating = (rate, idx) => {
     const label = 'rating'
     const newValue = rate
-    SetAddSkill([
+    setAddSkill([
       ...addSkill.slice(0, idx),
       {
         // here update data value
@@ -61,12 +61,12 @@ const JobApproval = () => {
   }
 
   const handleRemoveItem = (i) => {
-    SetAddSkill(addSkill.filter(item => item.skill !== i))
-    SetAddSkill(addSkill.filter(item => item.skillId.skill !== i))
+    setAddSkill(addSkill.filter(item => item.skill !== i))
+    setAddSkill(addSkill.filter(item => item.skillId.skill !== i))
   };
 
  
-  const [formValue , setformValue] = useState(
+  const [formValue , setFormValue] = useState(
     {
       id: "",
       jobTitle: "",
@@ -116,7 +116,7 @@ const JobApproval = () => {
 
   const handleJobDesc = (data) => {
 
-    setformValue({
+    setFormValue({
       id:data._id,
       jobTitle: data.jobTitle,
       companyId: data.companyId,
@@ -137,7 +137,7 @@ const JobApproval = () => {
     
     })
 
-    SetAddSkill(data.skillRequired)
+    setAddSkill(data.skillRequired)
     setApprovalBtnBg(approvalBtnCss)
     setRejectBtnBg(rejectBtnCss)
 
@@ -243,7 +243,7 @@ const JobApproval = () => {
   }
 
   const  handleChange = (e) => {
-    setformValue({...formValue , [e.target.name]:e.target.value })
+    setFormValue({...formValue , [e.target.name]:e.target.value })
   }
 
 
@@ -277,7 +277,7 @@ const JobApproval = () => {
         }
       }).then((response) => {
                
-        // setformValue({...formValue , [skillRequired]:})   
+        // setFormValue({...formValue , [skillRequired]:})   
 
         Swal.fire({
           title: "Updated successful ",
@@ -359,7 +359,7 @@ const JobApproval = () => {
 
   useEffect(() => {
     if (jobList.length > 0) {
-      setformValue({
+      setFormValue({
         id: jobList[0]._id,
         jobTitle: jobList[0].jobTitle,
         companyId: jobList[0].companyId,
@@ -379,7 +379,7 @@ const JobApproval = () => {
         travelRequired: jobList[0].travelRequired,
         skillRequired: jobList[0].skillRequired
       })
-      SetAddSkill(jobList[0].skillRequired)
+      setAddSkill(jobList[0].skillRequired)
     }
   }, [jobList])
 
@@ -418,13 +418,13 @@ const JobApproval = () => {
                   <div className='d-flex justify-content-between'>
                     <p style={{ fontSize: '1.2rem', fontWeight: '500' }} >{formValue.jobTitle}</p>
                     <h6>OPS-ID : {formValue.operatorId.fullname === undefined || ([null , undefined]).includes(formValue.operatorId.fullname) ? '' : formValue.operatorId.fullname} </h6>
-                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div className="btn-group mr-2" role="group" aria-label="First group">
                     <button type="button" className="btn edtBtn" data-toggle="modal" data-target={`.recommendation${formValue._id}`}>
                       <BiEdit size={25} color={"#FF8C04"} />
                     </button>
                     </div>
-                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <div className="btn-group mr-2" role="group" aria-label="First group">
                     <button type="button" className="btn edtBtn" onClick={() => handleDeleteJob(formValue.id)} >
                       <AiFillDelete size={25} color={"red"} />
                     </button>

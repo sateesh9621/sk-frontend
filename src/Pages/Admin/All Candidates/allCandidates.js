@@ -1,12 +1,11 @@
 import axios from "axios";
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import ApiConstants from "../../../Services/apiconstants";
 import ShowMoreText from "react-show-more-text";
 import { useSelector } from "react-redux";
 import DataTable from "react-data-table-component";
 import "./allCandidates.css";
 import { Interceptor } from "../../../ErrorStatus/errorStatus"
-
 export default function AllCandidates() {
   const [values, setValues] = useState({
     candidateData: {},
@@ -141,7 +140,7 @@ export default function AllCandidates() {
   };
 
     return (
-      <>
+      
         <div className="table myTables1">
           {Object.keys(values.candidateData).length && (
             <DataTable
@@ -167,7 +166,7 @@ export default function AllCandidates() {
           )}
 
         </div>
-      </>
+      
     );
   }
   

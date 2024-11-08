@@ -1,9 +1,8 @@
-import react, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import ApiConstants from "../../../Services/apiconstants";
 import Swal from "sweetalert2";
-import { FcAbout } from "react-icons/fc";
 import "./candidateSignup.css";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
 import Loading from "../../../Component/Loading/loading";
@@ -75,7 +74,7 @@ export default function CandidateSignup() {
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} ref={formRef}>
           <div className="mb-3">
-            <label className="form-label">Full Name</label>
+            <label className="form-label" htmlFor="fullName">Full Name</label>
             <input
               id="fullName"
               type="text"
@@ -91,7 +90,7 @@ export default function CandidateSignup() {
             )}
           </div>
           <div className="mb-3">
-            <label className="form-label">Email address</label>
+            <label className="form-label" htmlFor="email" >Email address</label>
             <input
               id="email"
               type="email"
@@ -111,7 +110,7 @@ export default function CandidateSignup() {
             )}
           </div>
           <div className="mb-3">
-            <label className="form-label">Password</label>
+            <label className="form-label" htmlFor="password" >Password</label>
             <input
               id="password"
               type="password"
@@ -119,7 +118,7 @@ export default function CandidateSignup() {
               placeholder="Password"
               {...register("password", {
                 required: true,
-                pattern: { value: /^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/ },
+                pattern: { value: /^(?=.*?[A-Za-z])(?=.*?\d).{6,}$/ },
               })}
             />
             {errors.password && (

@@ -1,7 +1,7 @@
 import axios from "axios";
 import $ from "jquery";
 import react, { useContext, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import {
@@ -11,9 +11,8 @@ import {
   BsLinkedin,
   BsPencil,
 } from "react-icons/bs";
-import { MdCall, MdEmail, MdLibraryAdd, MdMessage } from "react-icons/md";
+import { MdCall, MdEmail } from "react-icons/md";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
-import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 import uesrImageDefault from "../../Assets/profilePic.png";
 import Loading from "../../Component/Loading/loading";
@@ -24,13 +23,14 @@ import {
   subString,
   picSizeValidate,
   fileSizeValidate,
+  calculateProfileStrength,
 } from "../../UtilitiesFunctions/utilitiesFunction";
 import "./sidebar.css";
 import { Interceptor } from "../../ErrorStatus/errorStatus";
 import { RxCrossCircled } from "react-icons/rx";
 import { selectSidebarMenuSelection } from "../../Redux/Reducer/sidebarMenuSelectionSlice";
 import ProfileStrengthIndicator from "../Profile Strength indicator/profileStrengthIndicator";
-import {calculateProfileStrength}  from "../../UtilitiesFunctions/utilitiesFunction"
+
 
 
 const Sidebar = () => {

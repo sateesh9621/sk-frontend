@@ -33,7 +33,6 @@ const ReferalSidebar = () => {
     const candidateDataMix = JSON.parse(sessionStorage.getItem("candidate_data_ref"))
     var token = candidateDataMix.token;
     var userId = candidateDataMix.candidate._id;
-
   }
 
   const dispatch = useDispatch();
@@ -46,7 +45,7 @@ const ReferalSidebar = () => {
 
   const { promiseInProgress } = usePromiseTracker();
   const {
-    formState: {  },
+    formState: { },
   } = useForm();
 
 
